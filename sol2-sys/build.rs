@@ -11,13 +11,13 @@ fn main() {
     // ---------------------------------------------------------
     // Configure sol2
     // ---------------------------------------------------------
-    let mut sol2_config = cmake::Config::new("sol2");
-    configure_cmake_tools(&mut sol2_config);
-    sol2_config.define("SOL2_ENABLE_INSTALL", "ON");
-    sol2_config.define("SOL2_BUILD_LUA", "OFF");
-    sol2_config.define("SOL2_LUA_VERSION", "5.4");
-    sol2_config.define("CMAKE_PREFIX_PATH", lua_root);
-    let sol2_out = sol2_config.build();
+    let mut config = cmake::Config::new("sol2");
+    configure_cmake_tools(&mut config);
+    config.define("SOL2_ENABLE_INSTALL", "ON");
+    config.define("SOL2_BUILD_LUA", "OFF");
+    config.define("SOL2_LUA_VERSION", "5.4");
+    config.define("CMAKE_PREFIX_PATH", lua_root);
+    let sol2_out = config.build();
 
     println!("cargo::metadata=root={}", sol2_out.display());
     println!(
