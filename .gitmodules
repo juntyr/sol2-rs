@@ -1,0 +1,3 @@
+[submodule "sol2-sys/sol2"]
+	path = sol2-sys/sol2
+	url = https://github.com/juntyr/sol2

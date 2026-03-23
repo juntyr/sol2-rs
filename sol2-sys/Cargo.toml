@@ -1,0 +1,20 @@
+[package]
+name = "sol2-sys"
+version = "0.1.0"
+edition = { workspace = true }
+authors = { workspace = true }
+repository = { workspace = true }
+rust-version = { workspace = true }
+
+links = "sol2"
+
+description = "Low-level Rust build for the sol2 C++ <-> Lua API wrapper"
+readme = "README.md"
+categories = ["api-bindings"]
+keywords = ["sol2", "c++", "lua", "bindgen"]
+
+[dependencies]
+lua-sys = { workspace = true }
+
+[build-dependencies]
+cmake = { workspace = true }
