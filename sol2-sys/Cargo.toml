@@ -13,6 +13,12 @@ readme = "README.md"
 categories = ["api-bindings"]
 keywords = ["sol2", "c++", "lua", "bindgen"]
 
+exclude = [
+    "/sol2/.github", "/sol2/documentation", "/sol2/examples", "/sol2/scripts",
+    "/sol2/tests", "/sol2/.clang-format", "/sol2/.dockerignore",
+    "/sol2/.style.yapf", "/sol2/Dockerfile"
+]
+
 [dependencies]
 lua-sys = { workspace = true }
 
