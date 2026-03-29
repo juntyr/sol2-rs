@@ -20,7 +20,7 @@ exclude = [
 ]
 
 [dependencies]
-lua-sys = { workspace = true }
+mlua-sys = { workspace = true, features = ["lua54", "vendored"] }
 
 [build-dependencies]
 cmake = { workspace = true }

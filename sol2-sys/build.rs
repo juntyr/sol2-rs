@@ -4,9 +4,11 @@ fn main() {
     println!("cargo::rerun-if-changed=build.rs");
     println!("cargo::rerun-if-changed=sol2");
 
-    let lua_root = env::var("DEP_LUA_ROOT")
+    let lua_include = env::var("DEP_LUA_INCLUDE")
         .map(PathBuf::from)
         .expect("missing lua dependency");
+    let lua_root = lua_include.parent().expect("missing lua dependency root");
+    assert_eq!(lua_include, lua_root.join("include"));
 
     // ---------------------------------------------------------
     // Configure sol2
