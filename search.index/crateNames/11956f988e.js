@@ -1,1 +1,0 @@
-rd_("glua_syshsol2_sys")
